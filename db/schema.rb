@@ -15,15 +15,15 @@ ActiveRecord::Schema.define(version: 2020_01_21_154632) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "artist_genres", force: :cascade do |t|
-    t.integer "artist_id"
-    t.integer "genre_id"
+  create_table "artists", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "artists", force: :cascade do |t|
-    t.string "name"
+  create_table "connections", force: :cascade do |t|
+    t.integer "artist_id"
+    t.integer "genre_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

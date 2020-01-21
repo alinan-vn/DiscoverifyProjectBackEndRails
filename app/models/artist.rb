@@ -1,3 +1,4 @@
 class Artist < ApplicationRecord
-    has_and_belongs_to_many :genres
+    has_many :connections
+    has_many :genres, through: :connections
 end
