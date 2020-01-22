@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   
-  get '/artists' => 'artists#index'
-  get '/genres' => 'genres#index'
+  # get '/artists' => 'artists#index'
+  # get '/genres' => 'genres#index'
+
+  resources :artists
+  resources :genres
 
 end
