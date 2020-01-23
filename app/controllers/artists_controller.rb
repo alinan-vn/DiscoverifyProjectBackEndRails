@@ -23,6 +23,9 @@ class ArtistsController < ApplicationController
     def destroy
         artist = Artist.find_by(id: params[:id])
         artist.destroy
+
+        render json: artist, status: status
+        #if/then artist not found -> return json: artist not found
     end
 
 end
