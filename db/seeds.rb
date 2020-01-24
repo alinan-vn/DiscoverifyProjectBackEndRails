@@ -1,3 +1,11 @@
+genres_list = [
+    'Rock', 'Hip Hop', 'Blues', 'Pop', 'Metal', 'Jazz', 'Funk', 'Country', 'Classical', 'Punk', 'Folk', 'Rhythm and Blues', 'Reggae', 'Soul', 'Techno', 'House', 'Disco', 'EDM', 'Grunge', 'Indie', 'Ska'
+]
+
+genres_list.each do |gen|
+    Genre.create(name: gen)
+end
+
 rock = Genre.find_by(name: 'Rock') #22
 hip_hop = Genre.find_by(name: 'Hip Hop') #23
 blues = Genre.find_by(name: 'Blues') #24
@@ -19,6 +27,15 @@ edm = Genre.find_by(name: 'EDM') #39
 grunge = Genre.find_by(name: 'Grunge') #40
 indie = Genre.find_by(name: 'Indie') #41
 ska = Genre.find_by(name: 'Ska') #42
+
+artists_list = [
+    'ABBA', 'AC/DC', 'Aerosmith', 'Albert Hammond', 'Albert Hammond Jr', 'Al Green', 'alt-J', 'Arcade Fire', 'Arctic Monkeys', 'Ariel Pink', 'Band of Skulls', 'Battle Tapes', 'the Beatles', 'Beck', 'the Black Keys', 'Black Pistol Fire', 'the Blaze', 'blink-182', 'Blur', 'Bob Dylan', 'Bob Moses', 'Bonobo', 'Cage the Elephant'
+]
+
+artists_list.each do |art|
+    Artist.create(name: art)
+end
+
 
 abba = Artist.find_by(name: 'ABBA') #44
 Connection.create(artist_id: abba.id, genre_id: pop.id)
