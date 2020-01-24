@@ -101,9 +101,9 @@ the_black_keys = Artist.find_by(name: 'the Black Keys') #58
 Connection.create(artist_id: the_black_keys.id, genre_id: rock.id)
 Connection.create(artist_id: the_black_keys.id, genre_id: blues.id)
 
-blink_182 = Artist.find_by(name: 'Blink-182') #59
-Connection.create(artist_id: blink_182.id, genre_id: rock.id
-Connection.create(artist_id: blink_182.id, genre_id: punk.id))
+blink_182 = Artist.find_by(name: 'blink-182') #59
+Connection.create(artist_id: blink_182.id, genre_id: rock.id)
+Connection.create(artist_id: blink_182.id, genre_id: punk.id)
 
 blur = Artist.find_by(name: 'Blur') #60
 Connection.create(artist_id: blur.id, genre_id: rock.id)
