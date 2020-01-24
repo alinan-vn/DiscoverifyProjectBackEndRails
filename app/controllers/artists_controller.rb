@@ -18,6 +18,10 @@ class ArtistsController < ApplicationController
     end
     
     def update
+        artist = Artist.find_by(id: params[:id])
+        artist.update(name: params[:name])
+        
+        render json: artist
     end
 
     def destroy
